@@ -22,11 +22,7 @@ pipeline {
                 sh "docker push rajarajan/my-DevOps-php-website "
             }
         }
-#        stage('Install Python 3') {
-#            steps {
-#               ansiblePlaybook credentialsId: 'test-server', installation: 'ansible', inventory: 'servers.inv', playbook: 'python3-playbook.yml'
-#            }
-#        }
+
          stage('Install docker and its dependencies and run contianer') {
             steps {
                ansiblePlaybook credentialsId: 'test-server', installation: 'ansible', inventory: 'servers.inv', playbook: 'deployment-playbook.yml'
