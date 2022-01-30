@@ -24,7 +24,7 @@ pipeline {
         */
         
 
-         stage('Install docker and its dependencies and run contianer') {
+         /* stage('Install docker and its dependencies and run contianer') {
             steps {
                 ansiblePlaybook credentialsId: 'Node', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'servers.inv', playbook: 'deployment-playbook.yml'
               /*  sh "sudo su"
@@ -33,6 +33,7 @@ pipeline {
               ansiblePlaybook credentialsId: 'Node', installation: 'ansible', inventory: 'servers.inv', playbook: 'deployment-playbook.yml'*/
             }
         } 
+*/
 
     }
 }
