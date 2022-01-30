@@ -25,6 +25,7 @@ pipeline {
 
          stage('Install docker and its dependencies and run contianer') {
             steps {
+                sh "sudo su"
                 sh "ansible -m ping all -i servers.inv --private-key  /home/ec2-user/DevOpsProject.pem -u ec2-user"
               /*sh  ansible-playbook deployment-playbook.yml -i servers.inv --private-key  /home/ec2-user/DevOpsProject.pem -u ec2-user
               ansiblePlaybook credentialsId: 'Node', installation: 'ansible', inventory: 'servers.inv', playbook: 'deployment-playbook.yml'*/
