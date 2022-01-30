@@ -18,8 +18,7 @@ pipeline {
                 withCredentials([string(credentialsId: 'DockerPwd', variable: 'dockerPwd')]) {
                       sh "docker login -u prajan0550 -p ${dockerPwd}"
                 }
-                docker push prajan0550/devopsproject:tagname
-                sh "docker push prajan0550/my-devops-php-website"
+                     sh "docker push prajan0550/my-devops-php-website "
             }
         }
 
