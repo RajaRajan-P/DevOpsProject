@@ -7,7 +7,7 @@ pipeline {
                git branch: 'main', url: 'https://github.com/RajaRajan-P/DevOpsProject.git'
             }
         }
-        /*stage('Docker Build'){
+        /* stage('Docker Build'){
             steps{
                 sh "docker build . -t prajan0550/my-devops-php-website"
             }
@@ -31,6 +31,6 @@ pipeline {
               sh  ansible-playbook deployment-playbook.yml -i servers.inv --private-key  /home/ec2-user/DevOpsProject.pem -u ec2-user
               ansiblePlaybook credentialsId: 'Node', installation: 'ansible', inventory: 'servers.inv', playbook: 'deployment-playbook.yml'*/
             }
-        }*/
+        } */
     }
 }
