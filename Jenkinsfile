@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Docker Build'){
             steps{
-                sh "docker build . -t rajarajan/my-devOps-php-website"
+                sh "docker build . -t rajarajan/my-devops-php-website"
             }
         }
         stage('DockerHub Push'){
@@ -19,7 +19,7 @@ pipeline {
                       sh "docker login -u prajan0550 -p ${dockerPwd}"
                 }
                 
-                sh "docker push rajarajan/my-devOps-php-website "
+                sh "docker push rajarajan/my-devops-php-website "
             }
         }
 
