@@ -7,7 +7,7 @@ pipeline {
                git branch: 'main', url: 'https://github.com/RajaRajan-P/DevOpsProject.git'
             }
         }
-         stage('Docker Build'){
+         /* stage('Docker Build'){
             steps{
                 sh "docker build . -t prajan0550/my-devops-php-website"
             }
@@ -20,7 +20,7 @@ pipeline {
                 }
                      sh "docker push prajan0550/my-devops-php-website "
             }
-        }
+        } */
         
         
 
